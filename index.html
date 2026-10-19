@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maa Digital Seva — Your Service • Our Priority</title>
+<meta name="description" content="Maa Digital Seva — Aadhaar, PAN, Voter ID, Government Schemes, Education Forms, Print, Scan, Photocopy, Lamination and online applications. Fast, reliable digital services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="logo.png">
+<style>
+:root{
+  --navy:#0b2a5b; --navy2:#123a7a; --blue:#1565d8;
+  --orange:#f7941d; --orange-d:#e07d0a; --green:#3fae4a;
+  --pink:#e0356b; --teal:#12b5b0; --purple:#7b4bd8; --red:#e23b3b;
+  --ink:#12213a; --muted:#5b6b83; --line:#e6ecf5; --bg:#f5f8fd; --card:#fff;
+  --radius:18px; --shadow:0 12px 30px rgba(11,42,91,.10); --shadow-sm:0 4px 14px rgba(11,42,91,.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter','Poppins',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.brand-font{font-family:'Poppins',sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+img{max-width:100%;display:block}
+
+/* ---------- Top bar ---------- */
+.topbar{background:linear-gradient(90deg,var(--navy),var(--navy2));color:#dbe6f7;font-size:.82rem;padding:7px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar b{color:#fff}
+header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(11,42,91,.05)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{height:44px;width:44px;object-fit:contain}
+.brand .bn{font-family:'Poppins';font-weight:800;font-size:1.12rem;color:var(--navy);line-height:1.05}
+.brand .bn span{color:var(--orange)}
+.brand small{display:block;font-size:.66rem;color:var(--muted);font-weight:500;letter-spacing:.3px}
+.nav-links{display:flex;gap:8px;align-items:center}
+.nav-links a{padding:9px 15px;border-radius:10px;font-weight:600;font-size:.9rem;color:var(--navy);transition:.18s}
+.nav-links a:hover{background:#eef4fd}
+.nav-links a.active{background:var(--navy);color:#fff}
+.nav-links a.pay{background:linear-gradient(135deg,var(--green),#2f9a3c);color:#fff}
+.nav-links a.pay:hover{filter:brightness(1.06)}
+.nav-links a.admin{background:#f0f3f8;color:var(--navy)}
+.burger{display:none;font-size:1.5rem;background:none;border:none;color:var(--navy);cursor:pointer}
+@media(max-width:900px){
+  .nav-links{position:fixed;top:70px;right:0;left:0;background:#fff;flex-direction:column;align-items:stretch;padding:12px;gap:4px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);display:none}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 26px;border-radius:12px;font-weight:700;font-size:1rem;cursor:pointer;border:none;transition:transform .15s,box-shadow .2s,filter .2s}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:linear-gradient(135deg,var(--orange),var(--orange-d));color:#fff;box-shadow:0 8px 22px rgba(247,148,29,.35)}
+.btn-primary:hover{filter:brightness(1.05)}
+.btn-blue{background:linear-gradient(135deg,var(--blue),var(--navy2));color:#fff;box-shadow:0 8px 22px rgba(21,101,216,.3)}
+.btn-blue:hover{filter:brightness(1.06)}
+.btn-green{background:linear-gradient(135deg,var(--green),#2f9a3c);color:#fff}
+.btn-ghost{background:#fff;color:var(--navy);border:1.6px solid var(--line)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-sm{padding:9px 16px;font-size:.85rem;border-radius:10px}
+
+/* ---------- Views ---------- */
+.view{display:none;animation:fade .35s ease}
+.view.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0b2a5b 0%,#123a7a 45%,#1565d8 100%);color:#fff}
+.hero:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 300px at 85% 0%,rgba(247,148,29,.35),transparent 60%),
+  radial-gradient(500px 300px at 5% 100%,rgba(63,174,74,.3),transparent 60%);
+  pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0 70px}
+.hero h1{font-size:3rem;line-height:1.12;font-weight:800;letter-spacing:-.5px;margin-bottom:16px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#ffd479,#f7941d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.1rem;color:#cfe0f7;max-width:520px;margin-bottom:28px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-logo{background:rgba(255,255,255,.96);border-radius:26px;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,.28);text-align:center}
+.hero-logo img{margin:0 auto;max-height:320px}
+.trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;position:relative}
+.trust div{display:flex;align-items:center;gap:9px;font-size:.9rem;color:#dbe6f7}
+.trust b{font-size:1.35rem;color:#fff;font-family:'Poppins'}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;padding:40px 0 44px}.hero h1{font-size:2.15rem}.hero-logo{order:-1}.hero-logo img{max-height:230px}}
+
+/* ---------- Service icon tiles ---------- */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tile{background:#fff;border-radius:var(--radius);padding:26px 16px;text-align:center;box-shadow:var(--shadow-sm);border:1px solid var(--line);cursor:pointer;transition:.2s}
+.tile:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.tile .ico{width:66px;height:66px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font-size:1.9rem;color:#fff}
+.tile h3{font-size:.98rem;font-weight:700;color:var(--navy)}
+@media(max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- Section ---------- */
+section{padding:64px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 42px}
+.sec-head .kicker{color:var(--orange);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:.78rem}
+.sec-head h2{font-size:2.1rem;font-weight:800;color:var(--navy);margin:8px 0 10px;letter-spacing:-.4px}
+.sec-head p{color:var(--muted)}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.grid3{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow-sm);transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:16px;color:#fff}
+.card h3{font-size:1.1rem;color:var(--navy);margin-bottom:7px}
+.card p{color:var(--muted);font-size:.94rem}
+
+/* ---------- Services ---------- */
+.svc-tools{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.svc-tools input{flex:1;min-width:220px;max-width:420px;padding:13px 16px;border:1.6px solid var(--line);border-radius:12px;font-size:.95rem;font-family:inherit}
+.svc-tools input:focus{outline:none;border-color:var(--blue)}
+.cat-tabs{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.cat-tabs button{padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--navy);font-weight:600;font-size:.85rem;cursor:pointer;transition:.18s}
+.cat-tabs button:hover{border-color:var(--blue)}
+.cat-tabs button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.svc-cat{margin-bottom:34px}
+.svc-cat h3{font-size:1.25rem;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.svc-cat h3 .dot{width:12px;height:12px;border-radius:4px;display:inline-block}
+.svc-table{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.svc-row{display:grid;grid-template-columns:1fr 130px 100px 90px;gap:10px;padding:13px 18px;border-bottom:1px solid var(--line);align-items:center;font-size:.93rem}
+.svc-row:last-child{border-bottom:none}
+.svc-row.head{background:#f2f6fc;font-weight:700;color:var(--navy);font-size:.82rem;text-transform:uppercase;letter-spacing:.4px}
+.svc-row .nm{font-weight:500}
+.svc-row .un{color:var(--muted);font-size:.85rem}
+.svc-row .pr{font-weight:700;color:var(--green);text-align:right}
+.svc-row .add{text-align:right}
+.svc-row .add button{background:var(--blue);color:#fff;border:none;border-radius:8px;padding:6px 12px;font-size:.8rem;font-weight:600;cursor:pointer}
+.svc-row .add button:hover{filter:brightness(1.1)}
+@media(max-width:700px){.svc-row{grid-template-columns:1fr 90px 80px}.svc-row .un{display:none}.svc-row .add button{padding:6px 9px}}
+
+/* ---------- Order ---------- */
+.order-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:26px;align-items:start}
+@media(max-width:900px){.order-grid{grid-template-columns:1fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm)}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:600;font-size:.88rem;color:var(--navy);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1.6px solid var(--line);border-radius:10px;font-size:.95rem;font-family:inherit;background:#fff}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue)}
+.hint{font-size:.8rem;color:var(--muted);margin-top:5px}
+.notice{background:#fff7e8;border:1px solid #f6d9a0;border-radius:12px;padding:14px 16px;font-size:.88rem;color:#8a5a00;margin-bottom:18px}
+.notice b{color:#6d4600}
+.picked{background:#f7faff;border:1px solid var(--line);border-radius:12px;padding:8px 14px;margin-bottom:18px;max-height:260px;overflow:auto}
+.picked .pi{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.picked .pi:last-child{border-bottom:none}
+.picked .pi .rm{background:#fdecec;color:#c62828;border:none;border-radius:7px;padding:4px 9px;cursor:pointer;font-weight:700}
+.qty{display:inline-flex;align-items:center;gap:6px}
+.qty button{width:26px;height:26px;border-radius:7px;border:1.4px solid var(--line);background:#fff;cursor:pointer;font-weight:700;color:var(--navy)}
+.qty span{min-width:22px;text-align:center;font-weight:600}
+.total-box{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:14px;padding:16px 20px;margin:16px 0}
+.total-box .amt{font-size:1.7rem;font-weight:800;font-family:'Poppins'}
+.upload{border:2px dashed #b9cdf0;border-radius:12px;padding:20px;text-align:center;color:var(--muted);cursor:pointer;background:#f9fbff}
+.upload:hover{border-color:var(--blue)}
+.thumbs{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.thumbs img{width:70px;height:70px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+
+/* ---------- Payment ---------- */
+.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:920px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:38px;box-shadow:var(--shadow)}
+@media(max-width:760px){.pay-grid{grid-template-columns:1fr;padding:24px}}
+.qr-frame{width:250px;height:250px;margin:0 auto 16px;border:2px solid var(--navy);border-radius:18px;overflow:hidden;background:#fff;padding:6px}
+.qr-frame img{width:100%;height:100%;object-fit:contain}
+.upi-copy{display:flex;align-items:center;justify-content:center;gap:10px;background:#eef4fd;border-radius:12px;padding:12px 16px;font-weight:700;color:var(--navy);word-break:break-all;font-size:.95rem;flex-wrap:wrap}
+.upi-copy button{background:var(--navy);color:#fff;border:none;border-radius:8px;padding:8px 14px;font-size:.8rem;font-weight:600;cursor:pointer}
+.pay-steps .step{display:flex;gap:14px;margin-bottom:15px}
+.pay-steps .n{width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.pay-name{text-align:center;font-weight:700;color:var(--navy);margin-bottom:4px;font-size:1.05rem}
+
+/* ---------- Admin ---------- */
+.login-wrap{max-width:430px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:20px;padding:36px;box-shadow:var(--shadow);text-align:center}
+.login-wrap .lock{width:64px;height:64px;border-radius:50%;background:#eef4fd;display:grid;place-items:center;font-size:1.8rem;margin:0 auto 18px}
+.admin-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;border-bottom:2px solid var(--line);padding-bottom:2px}
+.admin-tabs button{padding:11px 18px;border:none;background:none;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent;font-size:.92rem}
+.admin-tabs button.active{color:var(--navy);border-bottom-color:var(--orange)}
+.admin-pane{display:none}
+.admin-pane.active{display:block}
+table.grid{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm);font-size:.9rem}
+table.grid th{background:#f2f6fc;color:var(--navy);text-align:left;padding:11px 14px;font-size:.8rem;text-transform:uppercase;letter-spacing:.4px}
+table.grid td{padding:11px 14px;border-top:1px solid var(--line)}
+table.grid tr:hover td{background:#f9fbff}
+.pill{padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700}
+.pill.paid{background:#e5f6e8;color:#1e7a2b}
+.pill.unpaid{background:#fdecec;color:#c62828}
+.pill.partial{background:#fff4e0;color:#a86a00}
+.row-flex{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.row-flex .field{flex:1;min-width:150px;margin-bottom:0}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:800px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm)}
+.stat .v{font-size:1.6rem;font-weight:800;color:var(--navy);font-family:'Poppins'}
+.stat .l{font-size:.8rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+
+/* ---------- Bill print ---------- */
+.bill{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--shadow-sm)}
+.bill-head{display:flex;justify-content:space-between;gap:16px;border-bottom:2px solid var(--navy);padding-bottom:14px;margin-bottom:16px;flex-wrap:wrap}
+.bill-head .bh-l{display:flex;gap:12px;align-items:center}
+.bill-head img{height:56px;width:56px;object-fit:contain}
+.bill-head h3{color:var(--navy);font-size:1.15rem}
+.bill-head .meta{text-align:right;font-size:.85rem;color:var(--muted)}
+.bill-total{display:flex;justify-content:flex-end;margin-top:14px}
+.bill-total table{border-collapse:collapse;min-width:260px}
+.bill-total td{padding:7px 12px;border-bottom:1px solid var(--line)}
+.bill-total .grand td{font-size:1.15rem;font-weight:800;color:var(--navy);border-top:2px solid var(--navy);border-bottom:none}
+
+/* ---------- Footer ---------- */
+footer{background:#0b2a5b;color:#c3d4ee;padding:48px 0 26px;margin-top:60px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+@media(max-width:800px){.foot-grid{grid-template-columns:1fr}}
+footer h4{color:#fff;font-family:'Poppins';margin-bottom:14px;font-size:1rem}
+footer a{color:#c3d4ee;display:block;padding:4px 0;font-size:.9rem}
+footer a:hover{color:#fff}
+footer .fbrand{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+footer .fbrand img{height:52px;width:52px;background:#fff;border-radius:12px;padding:5px}
+.copy{text-align:center;margin-top:30px;padding-top:20px;border-top:1px solid #1c3f74;font-size:.82rem;color:#8ba6cd}
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.5)}
+.float-wa:hover{transform:scale(1.07)}
+.float-wa svg{width:30px;height:30px;fill:#fff}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 22px;border-radius:12px;font-weight:600;font-size:.9rem;opacity:0;pointer-events:none;transition:.3s;z-index:200;box-shadow:var(--shadow)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ---------- Print ---------- */
+@media print{
+  body{background:#fff}
+  .topbar,header,footer,.float-wa,.no-print,.admin-tabs{display:none !important}
+  .view{display:none !important}
+  #bill-print-area{display:block !important}
+  .bill{border:none;box-shadow:none;padding:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div>📍 Serving our community — <b>online &amp; in-store</b></div>
+    <div>📞 <b id="top-phone">+91 00000 00000</b> &nbsp;•&nbsp; 🕘 Open Daily</div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <img src="logo.png" alt="Maa Digital Seva logo">
+      <div>
+        <div class="bn">Maa <span>Digital Seva</span></div>
+        <small>Your Service • Our Priority</small>
+      </div>
+    </div>
+    <button class="burger" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="#" data-view="home" class="active" onclick="show('home');return false">Home</a>
+      <a href="#" data-view="services" onclick="show('services');return false">Services &amp; Prices</a>
+      <a href="#" data-view="order" onclick="show('order');return false">Order Online</a>
+      <a href="#" data-view="payment" class="pay" onclick="show('payment');return false">Pay</a>
+      <a href="#" data-view="admin" class="admin" onclick="show('admin');return false">🔒 Owner Login</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================ HOME ============================ -->
+<div class="view active" id="view-home">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>All your <em>digital services</em>,<br>now simple &amp; fast</h1>
+        <p>Aadhaar, PAN, Voter ID, Government Schemes, Education Forms, Printing, Scanning and much more — all in one place.</p>
+        <div class="btns">
+          <a href="#" class="btn btn-primary" onclick="show('order');return false">🛒 Order Online</a>
+          <a href="#" class="btn btn-ghost" onclick="show('services');return false">View Services &amp; Prices</a>
+        </div>
+        <div class="trust">
+          <div><b>20</b> min service window</div>
+          <div><b>100%</b> secure &amp; private</div>
+          <div><b>UPI</b> payments accepted</div>
+        </div>
+      </div>
+      <div class="hero-logo"><img src="logo.png" alt="Maa Digital Seva"></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">What we do</div>
+        <h2>Everything under one roof</h2>
+        <p>Tap any service to see the full list and prices.</p>
+      </div>
+      <div class="tiles" id="home-tiles"></div>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Why choose us</div>
+        <h2>Quick. Reliable. Friendly.</h2>
+      </div>
+      <div class="grid3">
+        <div class="card"><div class="ic" style="background:linear-gradient(135deg,var(--blue),var(--navy2))">⚡</div><h3>Fast Service</h3><p>Most jobs are completed within a 20-minute window — no long waiting.</p></div>
+        <div class="card"><div class="ic" style="background:linear-gradient(135deg,var(--green),#2f9a3c)">🔒</div><h3>Safe &amp; Private</h3><p>Your documents and personal details are handled with complete care.</p></div>
+        <div class="card"><div class="ic" style="background:linear-gradient(135deg,var(--orange),var(--orange-d))">💳</div><h3>Easy Payment</h3><p>Pay by UPI — scan the QR or use our UPI ID. Simple and instant.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><div class="kicker">Get started</div><h2>Need something done today?</h2><p>Place your order online and pay in seconds.</p></div>
+      <div style="text-align:center">
+        <a href="#" class="btn btn-primary" onclick="show('order');return false">🛒 Place an Order</a>
+        <a href="#" class="btn btn-blue" onclick="show('payment');return false" style="margin-left:10px">💳 Make a Payment</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ SERVICES ============================ -->
+<div class="view" id="view-services">
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Rate card</div>
+        <h2>Services &amp; Prices</h2>
+        <p>Search or browse by category. Tap <b>Add</b> to include a service in your order.</p>
+      </div>
+      <div class="svc-tools">
+        <input id="svc-search" type="text" placeholder="🔎 Search a service (e.g. PAN, print, lamination)" oninput="renderServices()">
+      </div>
+      <div class="cat-tabs" id="cat-tabs"></div>
+      <div id="svc-list"></div>
+      <p class="hint" style="text-align:center;margin-top:10px">Prices are service charges in ₹. Government fees (where applicable) are charged separately and shown before billing.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ ORDER ============================ -->
+<div class="view" id="view-order">
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Online order</div>
+        <h2>Place Your Order</h2>
+        <p>Select your services, upload a photo of your document, and pay by UPI.</p>
+      </div>
+      <div class="order-grid">
+        <div class="panel">
+          <div class="notice">⏱️ <b>20-minute service window:</b> We complete and confirm your order within 20 minutes of receiving it. Orders not confirmed within this window will be rejected. Please place your order only when you are ready.</div>
+          <div class="row-flex">
+            <div class="field"><label>Your Name</label><input id="o-name" type="text" placeholder="Full name"></div>
+            <div class="field"><label>Mobile Number</label><input id="o-phone" type="tel" placeholder="10-digit mobile"></div>
+          </div>
+          <div class="field">
+            <label>Add a service</label>
+            <select id="o-service"></select>
+            <div class="hint">Choose a service and press “Add to order”.</div>
+          </div>
+          <div style="margin-bottom:18px"><button class="btn btn-blue btn-sm" onclick="addPicked()">➕ Add to order</button>
+            <button class="btn btn-ghost btn-sm" onclick="show('services')" style="margin-left:8px">Browse full price list</button></div>
+
+          <label style="font-weight:700;color:var(--navy);font-size:.9rem">Selected services</label>
+          <div class="picked" id="o-picked"><p class="hint" style="padding:8px 0">No services selected yet.</p></div>
+
+          <div class="field">
+            <label>Upload document photo(s) — optional</label>
+            <div class="upload" onclick="document.getElementById('o-file').click()">📷 Tap to upload a photo of your document</div>
+            <input id="o-file" type="file" accept="image/*" multiple style="display:none" onchange="previewFiles(this)">
+            <div class="thumbs" id="o-thumbs"></div>
+            <div class="hint">You can also send the photo later on WhatsApp. Your files stay on your device until you send them.</div>
+          </div>
+          <div class="field">
+            <label>Note (optional)</label>
+            <textarea id="o-note" rows="2" placeholder="Any special instruction…"></textarea>
+          </div>
+
+          <div class="total-box"><span>Total payable</span><span class="amt" id="o-total">₹0</span></div>
+          <button class="btn btn-primary" style="width:100%" onclick="placeOrder()">✅ Place Order on WhatsApp</button>
+          <p class="hint" style="text-align:center;margin-top:10px">This opens WhatsApp with your order summary. After that, pay by UPI and send us the payment screenshot.</p>
+        </div>
+
+        <div class="panel">
+          <h3 style="color:var(--navy);margin-bottom:14px">How it works</h3>
+          <div class="pay-steps">
+            <div class="step"><div class="n">1</div><div>Select your services and see the total.</div></div>
+            <div class="step"><div class="n">2</div><div>Send your order on WhatsApp with one tap.</div></div>
+            <div class="step"><div class="n">3</div><div>Pay the total by UPI (QR or UPI ID).</div></div>
+            <div class="step"><div class="n">4</div><div>Send us the payment screenshot — your order is confirmed.</div></div>
+          </div>
+          <div class="notice" style="background:#eaf5ec;border-color:#bfe3c6;color:#1e6b2c">⏱️ Confirmed orders are completed within 20 minutes. You will get your print/PDF ready to collect or receive.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ PAYMENT ============================ -->
+<div class="view" id="view-payment">
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Payment</div>
+        <h2>Pay by UPI</h2>
+        <p>Scan the QR or pay to our UPI ID. Works with GPay, PhonePe, Paytm and any UPI app.</p>
+      </div>
+      <div class="pay-grid">
+        <div style="text-align:center">
+          <div class="qr-frame"><img src="qr.jpg" alt="UPI QR code"></div>
+          <div class="pay-name">Maa Digital Seva</div>
+          <div class="upi-copy"><span id="upi-id">karanshaswata68-1@oksbi</span><button onclick="copyUpi()">Copy</button></div>
+        </div>
+        <div class="pay-steps">
+          <h3 style="color:var(--navy);margin-bottom:16px">Steps</h3>
+          <div class="step"><div class="n">1</div><div>Open any UPI app (GPay / PhonePe / Paytm).</div></div>
+          <div class="step"><div class="n">2</div><div>Scan the QR code — or copy the UPI ID above.</div></div>
+          <div class="step"><div class="n">3</div><div>Enter the exact amount and pay.</div></div>
+          <div class="step"><div class="n">4</div><div>Send the payment screenshot on WhatsApp to confirm.</div></div>
+          <div class="notice" style="margin-top:16px">💡 Paying for an online order? Use the total shown on the Order page.</div>
+          <a class="btn btn-green" style="width:100%;margin-top:6px" id="pay-wa" href="#" target="_blank" rel="noopener">Send screenshot on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ ADMIN ============================ -->
+<div class="view" id="view-admin">
+  <section>
+    <div class="wrap">
+      <!-- Login -->
+      <div id="admin-login">
+        <div class="sec-head">
+          <div class="kicker">Restricted</div>
+          <h2>Owner Login</h2>
+          <p>This area is for the shop owner only.</p>
+        </div>
+        <div class="login-wrap">
+          <div class="lock">🔒</div>
+          <div class="field"><label>Password</label><input id="admin-pass" type="password" placeholder="Enter password" onkeydown="if(event.key==='Enter')adminLogin()"></div>
+          <button class="btn btn-blue" style="width:100%" onclick="adminLogin()">Login</button>
+          <p class="hint" style="margin-top:12px" id="login-msg"></p>
+        </div>
+      </div>
+
+      <!-- Dashboard -->
+      <div id="admin-dash" style="display:none">
+        <div class="sec-head" style="margin-bottom:24px">
+          <div class="kicker">Owner dashboard</div>
+          <h2>Maa Digital Seva — Control Panel</h2>
+          <p>Create bills, record daily sales, manage services and view reports.</p>
+        </div>
+        <div class="admin-tabs">
+          <button class="active" onclick="adminTab('bill',this)">🧾 New Bill</button>
+          <button onclick="adminTab('records',this)">📊 Daily Records</button>
+          <button onclick="adminTab('services',this)">🛠️ Manage Services</button>
+          <button onclick="adminTab('reports',this)">📈 Reports</button>
+          <button onclick="adminLogout()" style="margin-left:auto;color:#c62828">Logout</button>
+        </div>
+
+        <!-- New Bill -->
+        <div class="admin-pane active" id="pane-bill">
+          <div class="row-flex" style="margin-bottom:16px">
+            <div class="field"><label>Customer Name</label><input id="b-name" type="text" placeholder="Customer name"></div>
+            <div class="field"><label>Mobile</label><input id="b-phone" type="tel" placeholder="Mobile number"></div>
+            <div class="field"><label>Payment Status</label><select id="b-status"><option>Paid</option><option>Unpaid</option><option>Partial</option></select></div>
+            <div class="field"><label>Payment Mode</label><select id="b-mode"><option>Cash</option><option>UPI</option><option>Other</option></select></div>
+          </div>
+          <div class="row-flex" style="margin-bottom:16px">
+            <div class="field" style="flex:2"><label>Add service (search)</label><input id="b-search" type="text" list="svc-datalist" placeholder="Type to search a service…"><datalist id="svc-datalist"></datalist></div>
+            <div class="field" style="max-width:110px"><label>Qty</label><input id="b-qty" type="number" value="1" min="1"></div>
+            <div class="field" style="max-width:140px"><label>Price ₹ (editable)</label><input id="b-price" type="number" placeholder="auto"></div>
+            <div class="field" style="max-width:140px"><label>Actual Cost ₹</label><input id="b-cost" type="number" placeholder="0"></div>
+            <button class="btn btn-blue btn-sm" onclick="billAddItem()">➕ Add</button>
+          </div>
+          <div style="overflow:auto">
+            <table class="grid" id="bill-items">
+              <thead><tr><th>Service</th><th>Qty</th><th>Price ₹</th><th>Amount ₹</th><th>Cost ₹</th><th></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="bill-total">
+            <table>
+              <tr><td>Subtotal</td><td id="bt-sub" style="text-align:right">₹0</td></tr>
+              <tr><td>Profit</td><td id="bt-profit" style="text-align:right">₹0</td></tr>
+              <tr class="grand"><td>Grand Total</td><td id="bt-total" style="text-align:right">₹0</td></tr>
+            </table>
+          </div>
+          <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn-primary" onclick="saveBill()">💾 Save Bill</button>
+            <button class="btn btn-ghost" onclick="printBill()">🖨️ Print / PDF</button>
+            <button class="btn btn-ghost" onclick="clearBill()">🗑️ Clear</button>
+          </div>
+        </div>
+
+        <!-- Records -->
+        <div class="admin-pane" id="pane-records">
+          <div class="stat-grid">
+            <div class="stat"><div class="v" id="st-today">₹0</div><div class="l">Today's Sales</div></div>
+            <div class="stat"><div class="v" id="st-month">₹0</div><div class="l">This Month</div></div>
+            <div class="stat"><div class="v" id="st-bills">0</div><div class="l">Total Bills</div></div>
+            <div class="stat"><div class="v" id="st-profit">₹0</div><div class="l">Total Profit</div></div>
+          </div>
+          <div class="row-flex" style="margin-bottom:14px">
+            <div class="field" style="max-width:220px"><label>Find a bill</label><input id="rec-search" type="text" placeholder="Name / mobile / bill no." oninput="renderRecords()"></div>
+          </div>
+          <div style="overflow:auto">
+            <table class="grid" id="rec-table">
+              <thead><tr><th>Bill No.</th><th>Date</th><th>Customer</th><th>Amount ₹</th><th>Profit ₹</th><th>Status</th><th>Mode</th><th></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Manage services -->
+        <div class="admin-pane" id="pane-services">
+          <div class="row-flex" style="margin-bottom:16px">
+            <div class="field" style="flex:2"><label>Service name</label><input id="ms-name" type="text" placeholder="New service name"></div>
+            <div class="field"><label>Unit</label><input id="ms-unit" type="text" placeholder="e.g. per page"></div>
+            <div class="field" style="max-width:130px"><label>Selling Price ₹</label><input id="ms-price" type="number"></div>
+            <div class="field" style="max-width:130px"><label>Actual Cost ₹</label><input id="ms-cost" type="number"></div>
+            <button class="btn btn-blue btn-sm" onclick="addService()">➕ Add Service</button>
+          </div>
+          <div style="overflow:auto;max-height:520px">
+            <table class="grid" id="ms-table">
+              <thead><tr><th>Service</th><th>Unit</th><th>Price ₹</th><th>Cost ₹</th><th>Profit ₹</th><th></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Reports -->
+        <div class="admin-pane" id="pane-reports">
+          <div class="row-flex" style="margin-bottom:16px">
+            <div class="field" style="max-width:200px"><label>Report date</label><input id="rp-date" type="date" onchange="renderReports()"></div>
+          </div>
+          <div class="stat-grid">
+            <div class="stat"><div class="v" id="rp-sales">₹0</div><div class="l">Sales (selected date)</div></div>
+            <div class="stat"><div class="v" id="rp-count">0</div><div class="l">Bills (selected date)</div></div>
+            <div class="stat"><div class="v" id="rp-profit">₹0</div><div class="l">Profit</div></div>
+            <div class="stat"><div class="v" id="rp-avg">₹0</div><div class="l">Avg. bill value</div></div>
+          </div>
+          <div style="overflow:auto">
+            <table class="grid" id="rp-table">
+              <thead><tr><th>Service</th><th>Qty</th><th>Sales ₹</th><th>Profit ₹</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- printable bill -->
+<div id="bill-print-area" style="display:none"></div>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="fbrand"><img src="logo.png" alt="logo"><div><div class="brand-font" style="font-weight:800;font-size:1.1rem;color:#fff">Maa Digital Seva</div><div style="font-size:.8rem;color:#9fbbe4">Your Service • Our Priority</div></div></div>
+      <p style="font-size:.9rem;max-width:340px">Aadhaar, PAN, Voter ID, Government Schemes, Education Forms, Printing, Scanning and online applications — all in one place.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#" onclick="show('home');return false">Home</a>
+      <a href="#" onclick="show('services');return false">Services &amp; Prices</a>
+      <a href="#" onclick="show('order');return false">Order Online</a>
+      <a href="#" onclick="show('payment');return false">Pay by UPI</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a id="foot-phone" href="tel:">📞 +91 00000 00000</a>
+      <a id="foot-wa2" href="#" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a href="#" onclick="show('payment');return false">💳 UPI: karanshaswata68-1@oksbi</a>
+    </div>
+  </div>
+  <div class="copy">© <span id="yr"></span> Maa Digital Seva. All rights reserved.</div>
+</footer>
+
+<a class="float-wa" id="float-wa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16.04 4C9.9 4 4.92 8.98 4.92 15.12c0 2.02.54 3.92 1.48 5.56L4.5 28l7.5-1.9c1.58.86 3.4 1.36 5.34 1.36h.01c6.14 0 11.12-4.98 11.12-11.12S22.18 4 16.04 4zm0 20.3c-1.72 0-3.36-.46-4.78-1.28l-.34-.2-4.44 1.12 1.18-4.32-.22-.36a9.1 9.1 0 01-1.4-4.86c0-5.04 4.1-9.14 9.14-9.14 2.44 0 4.74.95 6.46 2.68a9.07 9.07 0 012.68 6.46c0 5.04-4.1 9.14-9.14 9.14zm5.02-6.84c-.28-.14-1.62-.8-1.88-.9-.25-.09-.44-.14-.62.14-.18.28-.72.9-.88 1.08-.16.18-.32.2-.6.07-.28-.14-1.16-.43-2.2-1.36-.82-.73-1.36-1.62-1.52-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47l-.53-.01c-.18 0-.48.07-.73.35-.25.28-.96.94-.96 2.28s.98 2.64 1.12 2.82c.14.18 1.94 2.96 4.7 4.15.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.62-.66 1.85-1.3.23-.64.23-1.18.16-1.3-.07-.11-.25-.18-.53-.32z"/></svg>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================================================================
+   MAA DIGITAL SEVA — configuration
+   Edit the two values below to change the WhatsApp number and phone number.
+   ========================================================================= */
+const WHATSAPP = "91XXXXXXXXXX";           // <-- owner's WhatsApp number (country code, no +)
+const PHONE_DISPLAY = "+91 00000 00000";   // <-- number shown on the site
+const ADMIN_PASSWORD = "Maa@8230";         // <-- owner login password
+
+/* ============================ SERVICE CATALOG (English) ============================ */
+const CATEGORIES = [
+ {id:"print", name:"Photocopy, Print & Documents", color:"#1565d8", icon:"🖨️", items:[
+  ["Black & White Xerox — single side","Per page",5],
+  ["Black & White Xerox — double side","Per sheet",8],
+  ["B&W Xerox, 16+ pages — single side","Per page",3],
+  ["B&W Xerox, 16+ sheets — double side","Per sheet",5],
+  ["Colour Xerox — single side","Per page",15],
+  ["Colour Xerox — double side","Per sheet",20],
+  ["Colour Xerox, 16+ pages — single side","Per page",12],
+  ["Colour Xerox, 16+ sheets — double side","Per sheet",18],
+  ["B&W PDF print","Per page",5],
+  ["B&W print, 16+ pages","Per page",3],
+  ["Colour PDF print","Per page",15],
+  ["Colour PDF print, 16+ pages","Per page",12],
+  ["Colour print on photographic paper","Per sheet",30],
+  ["A3 B&W print","Per page",15],
+  ["A3 colour print","Per page",30],
+  ["Document scan","Per page",10],
+  ["Scan multiple pages into one PDF","Per file",50],
+  ["PDF compress","Per file",30],
+  ["Merge PDF pages","Per file",30],
+  ["Split PDF pages","Per file",30],
+  ["Convert PDF to images","Per file",30],
+  ["Create PDF from images","Per file",30],
+  ["Resize document photo","Per image",30],
+  ["Resize photo & signature for online forms","Per set",50],
+  ["Passport-size photo — create","Per set",50],
+  ["Passport-size photo — print","8 copies",60],
+  ["Photo background change","Per image",50],
+  ["Document print & staple","Per set",10],
+  ["A4 lamination","Per sheet",30],
+  ["ID card lamination","Per card",20],
+  ["PVC card print","Per card",100],
+  ["Normal document binding","Per copy",50],
+  ["Spiral binding","Per copy",80]
+ ]},
+ {id:"computer", name:"Download, Typing & Computer", color:"#7b4bd8", icon:"💻", items:[
+  ["Aadhaar PDF download help","Per job",50],
+  ["PAN card PDF download","Per job",50],
+  ["Voter card download","Per job",50],
+  ["Digital Ration card download","Per job",50],
+  ["Birth certificate download","Per job",50],
+  ["Death certificate download","Per job",50],
+  ["Caste certificate download","Per job",50],
+  ["Income certificate download","Per job",50],
+  ["Domicile certificate download","Per job",50],
+  ["Scholarship certificate / receipt download","Per job",50],
+  ["Admit card download","Per job",50],
+  ["Exam result download","Per job",30],
+  ["Government application receipt download","Per job",30],
+  ["Online status check","Per application",30],
+  ["Bengali typing","Per page",40],
+  ["English typing","Per page",30],
+  ["General application writing","Per application",100],
+  ["Complaint letter writing","Per application",150],
+  ["Personal application writing","Per application",100],
+  ["CV / bio-data creation","Per copy",200],
+  ["Professional CV design","Per copy",300],
+  ["Email creation & setup help","Per job",50],
+  ["Send document by email","Per job",30],
+  ["Download document from WhatsApp","Per job",30],
+  ["Combine documents into one PDF","Per set",100],
+  ["Online file upload","Per application",50],
+  ["Fix document format","Per file",50],
+  ["Basic Bengali–English translation typing","Per page",100]
+ ]},
+ {id:"identity", name:"Aadhaar, PAN, Voter & Ration Card", color:"#0b2a5b", icon:"🆔", items:[
+  ["New PAN card application","Per application",250],
+  ["PAN card correction application","Per application",250],
+  ["PAN card reprint application","Per application",200],
+  ["Help finding PAN number","Per job",100],
+  ["Aadhaar address change — online help","Per application",200],
+  ["Aadhaar document update — help","Per application",200],
+  ["Aadhaar download & print preparation","Per job",100],
+  ["Aadhaar PVC card order help","Per job",100],
+  ["New voter card registration","Per application",200],
+  ["Voter card correction","Per application",200],
+  ["Voter card address change application","Per application",200],
+  ["Find name in voter list","Per job",50],
+  ["Ration card name correction","Per application",200],
+  ["Ration card — add new member","Per application",200],
+  ["Ration card — remove member","Per application",200],
+  ["Ration card address correction","Per application",200],
+  ["Ration card information verification","Per job",100],
+  ["Ration card download","Per job",50],
+  ["Aadhaar-PAN linking status check","Per job",100],
+  ["Aadhaar-PAN linking help","Per job",200]
+ ]},
+ {id:"schemes", name:"Govt Schemes, Pension & Certificates", color:"#3fae4a", icon:"🏛️", items:[
+  ["Lakshmir Bhandar application","Per application",250],
+  ["Widow pension application","Per application",250],
+  ["Old-age pension application","Per application",250],
+  ["Disability pension application","Per application",250],
+  ["Manabik pension application","Per application",250],
+  ["Annapurna Bhandar (when open)","Per application",250],
+  ["Krishak Bandhu application","Per application",250],
+  ["Rupashree scheme application","Per application",300],
+  ["Oikyo Shree scholarship","Per application",250],
+  ["Other scholarships","Per application",250],
+  ["Birth certificate online application","Per application",250],
+  ["Death certificate online application","Per application",250],
+  ["Caste certificate application","Per application",250],
+  ["Income certificate application","Per application",250],
+  ["Domicile certificate application","Per application",250],
+  ["Disability certificate online application","Per application",250],
+  ["Govt pension status & document verification","Per job",100],
+  ["Govt scheme application correction help","Per application",200],
+  ["Scheme application print & document set","Per set",100]
+ ]},
+ {id:"education", name:"School, College, Scholarship & Job Forms", color:"#12b5b0", icon:"🎓", items:[
+  ["School admission form","Per application",200],
+  ["Class 5–8 school form","Per application",200],
+  ["Class 9–12 school form","Per application",200],
+  ["School re-admission form","Per application",200],
+  ["School scholarship form","Per application",250],
+  ["College admission form","Per application",300],
+  ["University admission form","Per application",300],
+  ["University exam form","Per application",250],
+  ["ITI admission form","Per application",300],
+  ["Polytechnic admission form","Per application",300],
+  ["Government job application","Per application",300],
+  ["WBPSC application","Per application",300],
+  ["Police recruitment application","Per application",300],
+  ["Railway recruitment application","Per application",300],
+  ["SSC & other central recruitment","Per application",300],
+  ["Group C & Group D job application","Per application",300],
+  ["Govt exam admit card download","Per job",50],
+  ["Exam result download","Per job",30],
+  ["Application mistake correction help","Per application",200],
+  ["Exam application & document verification","Per application",100],
+  ["Online exam fee payment help","Per job",50]
+ ]},
+ {id:"other", name:"Other Online Applications & Services", color:"#e0356b", icon:"📝", items:[
+  ["e-Shram card application","Per application",200],
+  ["Ayushman Bharat card eligibility & help","Per job",200],
+  ["PM-Kisan application","Per application",250],
+  ["PM-Kisan e-KYC help","Per job",150],
+  ["Driving licence online application","Per application",300],
+  ["Learner licence application","Per application",300],
+  ["Passport application form filling help","Per application",500],
+  ["Passport appointment booking help","Per job",200],
+  ["Online DOB / identity document verification","Per job",100],
+  ["Bank account opening form help","Per application",200],
+  ["Registration on a government portal","Per job",150],
+  ["Online complaint filing","Per application",200],
+  ["RTI online application typing & submission","Per application",250],
+  ["Online job profile creation","Per profile",200],
+  ["Send online job application","Per application",100],
+  ["Online appointment booking","Per job",150]
+ ]},
+ {id:"recharge", name:"Recharge, Bill Payment & Banking", color:"#f7941d", icon:"📱", soon:true, items:[
+  ["Mobile Recharge","Amount + service charge"],
+  ["DTH Recharge","Amount + service charge"],
+  ["Electricity bill payment","Bill + approved charge"],
+  ["LPG gas booking & payment","Actual price + applicable charge"],
+  ["Other utility bills","Actual bill + approved charge"],
+  ["AePS cash withdrawal","As per approved commission"],
+  ["AePS balance check","As per approved commission"],
+  ["AePS mini statement","As per approved commission"],
+  ["Micro-ATM service","As per contract & commission"],
+  ["Money transfer","As per provider's charge"]
+ ]}
+];
+
+/* ============================ STATE ============================ */
+const BASE_SERVICES = CATEGORIES.flatMap(c=>c.items.map(i=>({cat:c.id,catName:c.name,color:c.color,icon:c.icon,soon:!!c.soon,name:i[0],unit:i[1],price:i[2],cost:0})));
+let SERVICES = load("mds_services", null) || BASE_SERVICES;
+let BILLS = load("mds_bills", []);
+let picked = [];
+let billItems = [];
+let files = [];
+
+function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function money(n){return "₹"+(Math.round(n*100)/100).toLocaleString('en-IN')}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2200)}
+
+/* ============================ NAV / VIEWS ============================ */
+function show(v){
+  document.querySelectorAll('.view').forEach(e=>e.classList.remove('active'));
+  const el=document.getElementById('view-'+v); if(el) el.classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('active',a.dataset.view===v));
+  document.getElementById('navlinks').classList.remove('open');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(v==='services') renderServices();
+  if(v==='order') fillOrderSelect();
+}
+
+/* ============================ HOME TILES ============================ */
+function renderTiles(){
+  const t=document.getElementById('home-tiles');
+  t.innerHTML=CATEGORIES.map(c=>`<div class="tile" onclick="goCat('${c.id}')"><div class="ico" style="background:linear-gradient(135deg,${c.color},${shade(c.color)})">${c.icon}</div><h3>${c.name}</h3></div>`).join('');
+}
+function shade(hex){return hex}
+function goCat(id){activeCat=id;show('services');renderServices()}
+
+/* ============================ SERVICES ============================ */
+let activeCat='all';
+function renderCatTabs(){
+  const t=document.getElementById('cat-tabs');
+  const all=`<button class="${activeCat==='all'?'active':''}" onclick="setCat('all')">All</button>`;
+  t.innerHTML=all+CATEGORIES.map(c=>`<button class="${activeCat===c.id?'active':''}" onclick="setCat('${c.id}')">${c.icon} ${c.name}</button>`).join('');
+}
+function setCat(id){activeCat=id;renderCatTabs();renderServices()}
+function renderServices(){
+  renderCatTabs();
+  const q=(document.getElementById('svc-search').value||'').toLowerCase().trim();
+  const list=document.getElementById('svc-list');
+  // build the list of categories to show, including any custom ones added by the owner
+  const known=CATEGORIES.map(c=>c.id);
+  const cats=CATEGORIES.slice();
+  if(SERVICES.some(s=>!known.includes(s.cat))) cats.push({id:'custom',name:'My Custom Services',color:'#0b2a5b',icon:'✳️'});
+  let html='';
+  cats.forEach(c=>{
+    if(activeCat!=='all' && activeCat!==c.id) return;
+    const rows=[];
+    SERVICES.forEach((s,idx)=>{ if(s.cat!==c.id) return; if(q && !s.name.toLowerCase().includes(q)) return; rows.push([s,idx]); });
+    if(!rows.length) return;
+    html+=`<div class="svc-cat"><h3><span class="dot" style="background:${c.color}"></span>${c.icon} ${c.name} ${c.soon?'<span class="pill partial">Coming Soon</span>':''}</h3>
+    <div class="svc-table"><div class="svc-row head"><div>Service</div><div>Unit</div><div style="text-align:right">Price</div><div></div></div>`;
+    rows.forEach(([s,idx])=>{
+      const price = (typeof s.price==='number')? money(s.price) : s.price;
+      html+=`<div class="svc-row"><div class="nm">${s.name}</div><div class="un">${s.unit||''}</div><div class="pr">${price}</div>
+      <div class="add"><button onclick="addFromCatalog(${idx})">Add</button></div></div>`;
+    });
+    html+=`</div></div>`;
+  });
+  list.innerHTML=html||'<p style="text-align:center;color:var(--muted)">No services found. Try a different search.</p>';
+}
+function addFromCatalog(i){
+  const s=SERVICES[i]; if(!s) return;
+  const price=(typeof s.price==='number')?s.price:0;
+  const ex=picked.find(p=>p.name===s.name);
+  if(ex){ex.qty++} else {picked.push({name:s.name,price:price,qty:1})}
+  toast('Added: '+s.name);
+}
+
+/* ============================ ORDER ============================ */
+function fillOrderSelect(){
+  const sel=document.getElementById('o-service');
+  let html='';
+  CATEGORIES.forEach(c=>{
+    if(c.soon) return;
+    let opts='';
+    SERVICES.forEach((s,idx)=>{ if(s.cat!==c.id) return; const p=(typeof s.price==='number')?s.price:0; opts+=`<option value="${idx}">${s.name} — ${p?money(p):'on request'}</option>`; });
+    if(opts) html+=`<optgroup label="${c.name}">${opts}</optgroup>`;
+  });
+  let cust='';
+  SERVICES.forEach((s,idx)=>{ if(s.cat==='custom'){ const p=(typeof s.price==='number')?s.price:0; cust+=`<option value="${idx}">${s.name} — ${p?money(p):'on request'}</option>`; } });
+  if(cust) html+=`<optgroup label="Custom">${cust}</optgroup>`;
+  sel.innerHTML=html;
+}
+function addPicked(){
+  const sel=document.getElementById('o-service');
+  if(sel.value==='') return;
+  const s=SERVICES[parseInt(sel.value)]; if(!s) return;
+  const price=(typeof s.price==='number')?s.price:0;
+  const ex=picked.find(p=>p.name===s.name);
+  if(ex){ex.qty++} else {picked.push({name:s.name,price:price,qty:1})}
+  renderPicked(); toast('Added to order');
+}
+function renderPicked(){
+  const box=document.getElementById('o-picked');
+  if(!picked.length){box.innerHTML='<p class="hint" style="padding:8px 0">No services selected yet.</p>';updateOrderTotal();return}
+  box.innerHTML=picked.map((p,i)=>`<div class="pi"><span>${p.name}</span>
+    <span class="qty"><button onclick="chg(${i},-1)">−</button><span>${p.qty}</span><button onclick="chg(${i},1)">+</button></span>
+    <b>${money(p.price*p.qty)}</b><button class="rm" onclick="rm(${i})">✕</button></div>`).join('');
+  updateOrderTotal();
+}
+function chg(i,d){picked[i].qty=Math.max(1,picked[i].qty+d);renderPicked()}
+function rm(i){picked.splice(i,1);renderPicked()}
+function updateOrderTotal(){const t=picked.reduce((s,p)=>s+p.price*p.qty,0);document.getElementById('o-total').textContent=money(t)}
+function previewFiles(inp){
+  files=Array.from(inp.files||[]);
+  const box=document.getElementById('o-thumbs');box.innerHTML='';
+  files.forEach(f=>{const r=new FileReader();r.onload=e=>{const im=document.createElement('img');im.src=e.target.result;box.appendChild(im)};r.readAsDataURL(f)});
+}
+function placeOrder(){
+  const name=document.getElementById('o-name').value.trim();
+  const phone=document.getElementById('o-phone').value.trim();
+  if(!picked.length){toast('Please add at least one service');return}
+  if(!name){toast('Please enter your name');show('order');return}
+  const total=picked.reduce((s,p)=>s+p.price*p.qty,0);
+  let msg="*New Order — Maa Digital Seva*%0A";
+  msg+="Name: "+name+"%0A";
+  if(phone) msg+="Mobile: "+phone+"%0A";
+  msg+="%0A*Services:*%0A";
+  picked.forEach(p=>{msg+="• "+p.name+" x"+p.qty+" = "+money(p.price*p.qty)+"%0A"});
+  msg+="%0A*Total: "+money(total)+"*%0A";
+  const note=document.getElementById('o-note').value.trim();
+  if(note) msg+="Note: "+note+"%0A";
+  if(files.length) msg+="%0A(I will send "+files.length+" document photo(s) here.)%0A";
+  msg+="%0APlease confirm within the 20-minute window.";
+  window.open("https://wa.me/"+WHATSAPP+"?text="+msg,"_blank");
+  toast('Opening WhatsApp…');
+}
+function copyUpi(){const t=document.getElementById('upi-id').textContent.trim();navigator.clipboard.writeText(t).then(()=>toast('UPI ID copied'))}
+
+/* ============================ ADMIN ============================ */
+function adminLogin(){
+  const p=document.getElementById('admin-pass').value;
+  const m=document.getElementById('login-msg');
+  if(p===ADMIN_PASSWORD){
+    sessionStorage.setItem('mds_auth','1');
+    document.getElementById('admin-login').style.display='none';
+    document.getElementById('admin-dash').style.display='block';
+    m.textContent=''; document.getElementById('admin-pass').value='';
+    initAdmin();
+  } else { m.textContent='❌ Wrong password. Please try again.'; m.style.color='#c62828'; }
+}
+function adminLogout(){sessionStorage.removeItem('mds_auth');document.getElementById('admin-dash').style.display='none';document.getElementById('admin-login').style.display='block';toast('Logged out')}
+function adminTab(id,btn){
+  document.querySelectorAll('.admin-pane').forEach(p=>p.classList.remove('active'));
+  document.getElementById('pane-'+id).classList.add('active');
+  document.querySelectorAll('.admin-tabs button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if(id==='records') renderRecords();
+  if(id==='services') renderManage();
+  if(id==='reports') renderReports();
+}
+function initAdmin(){
+  if(!document.getElementById('b-search').value){}
+  const dl=document.getElementById('svc-datalist');
+  dl.innerHTML=SERVICES.map(s=>`<option value="${s.name}">`).join('');
+  document.getElementById('b-search').onchange=function(){
+    const s=SERVICES.find(x=>x.name===this.value);
+    if(s){document.getElementById('b-price').value=(typeof s.price==='number')?s.price:'';document.getElementById('b-cost').value=s.cost||0}
+  };
+  document.getElementById('rp-date').value=new Date().toISOString().slice(0,10);
+  renderBill();
+}
+
+/* ---- Bill ---- */
+function billAddItem(){
+  const name=document.getElementById('b-search').value.trim();
+  if(!name){toast('Type or choose a service');return}
+  const qty=parseInt(document.getElementById('b-qty').value)||1;
+  const price=parseFloat(document.getElementById('b-price').value)||0;
+  const cost=parseFloat(document.getElementById('b-cost').value)||0;
+  billItems.push({name,qty,price,cost});
+  document.getElementById('b-search').value='';document.getElementById('b-qty').value=1;
+  document.getElementById('b-price').value='';document.getElementById('b-cost').value='';
+  renderBill();
+}
+function renderBill(){
+  const tb=document.querySelector('#bill-items tbody');
+  tb.innerHTML=billItems.map((it,i)=>`<tr><td>${it.name}</td><td>${it.qty}</td><td>${money(it.price)}</td><td>${money(it.price*it.qty)}</td><td>${money(it.cost*it.qty)}</td><td><button class="rm" style="background:#fdecec;color:#c62828;border:none;border-radius:7px;padding:4px 9px;cursor:pointer" onclick="billRm(${i})">✕</button></td></tr>`).join('')||'<tr><td colspan="6" style="color:var(--muted)">No items yet.</td></tr>';
+  const sub=billItems.reduce((s,i)=>s+i.price*i.qty,0);
+  const cost=billItems.reduce((s,i)=>s+i.cost*i.qty,0);
+  document.getElementById('bt-sub').textContent=money(sub);
+  document.getElementById('bt-profit').textContent=money(sub-cost);
+  document.getElementById('bt-total').textContent=money(sub);
+}
+function billRm(i){billItems.splice(i,1);renderBill()}
+function clearBill(){billItems=[];['b-name','b-phone'].forEach(id=>document.getElementById(id).value='');renderBill();toast('Bill cleared')}
+function nextBillNo(){return 'MDS-'+(BILLS.length+1).toString().padStart(4,'0')}
+function saveBill(){
+  if(!billItems.length){toast('Add at least one item');return}
+  const sub=billItems.reduce((s,i)=>s+i.price*i.qty,0);
+  const cost=billItems.reduce((s,i)=>s+i.cost*i.qty,0);
+  const bill={no:nextBillNo(),date:new Date().toISOString(),name:document.getElementById('b-name').value.trim()||'Walk-in customer',phone:document.getElementById('b-phone').value.trim(),status:document.getElementById('b-status').value,mode:document.getElementById('b-mode').value,items:billItems.slice(),total:sub,cost:cost,profit:sub-cost};
+  BILLS.push(bill);save('mds_bills',BILLS);
+  toast('Bill '+bill.no+' saved');
+  renderBill();renderRecords();
+}
+function printBill(){
+  if(!billItems.length){toast('Add at least one item');return}
+  const sub=billItems.reduce((s,i)=>s+i.price*i.qty,0);
+  const name=document.getElementById('b-name').value.trim()||'Walk-in customer';
+  const phone=document.getElementById('b-phone').value.trim();
+  const status=document.getElementById('b-status').value, mode=document.getElementById('b-mode').value;
+  const rows=billItems.map((it,i)=>`<tr><td>${i+1}</td><td>${it.name}</td><td style="text-align:center">${it.qty}</td><td style="text-align:right">${money(it.price)}</td><td style="text-align:right">${money(it.price*it.qty)}</td></tr>`).join('');
+  const html=`<div class="bill">
+    <div class="bill-head"><div class="bh-l"><img src="logo.png"><div><h3>Maa Digital Seva</h3><div style="font-size:.8rem;color:var(--muted)">Your Service • Our Priority</div></div></div>
+    <div class="meta"><b>INVOICE</b><br>Bill No: ${nextBillNo()}<br>Date: ${new Date().toLocaleDateString('en-IN')}<br>Status: ${status} • ${mode}</div></div>
+    <div style="margin-bottom:12px"><b>Customer:</b> ${name}${phone?' • '+phone:''}</div>
+    <table class="grid"><thead><tr><th>#</th><th>Service</th><th style="text-align:center">Qty</th><th style="text-align:right">Price</th><th style="text-align:right">Amount</th></tr></thead><tbody>${rows}</tbody></table>
+    <div class="bill-total"><table><tr><td>Subtotal</td><td style="text-align:right">${money(sub)}</td></tr><tr class="grand"><td>Grand Total</td><td style="text-align:right">${money(sub)}</td></tr></table></div>
+    <p style="text-align:center;margin-top:20px;color:var(--muted);font-size:.82rem">Thank you for choosing Maa Digital Seva. UPI: karanshaswata68-1@oksbi</p>
+  </div>`;
+  const area=document.getElementById('bill-print-area');area.innerHTML=html;area.style.display='block';
+  window.print();
+  setTimeout(()=>{area.style.display='none'},400);
+}
+
+/* ---- Records ---- */
+function renderRecords(){
+  const q=(document.getElementById('rec-search').value||'').toLowerCase();
+  const tb=document.querySelector('#rec-table tbody');
+  const list=BILLS.filter(b=>!q||b.name.toLowerCase().includes(q)||(b.phone||'').includes(q)||b.no.toLowerCase().includes(q)).slice().reverse();
+  tb.innerHTML=list.map(b=>`<tr><td>${b.no}</td><td>${new Date(b.date).toLocaleDateString('en-IN')}</td><td>${b.name}${b.phone?'<br><small style="color:var(--muted)">'+b.phone+'</small>':''}</td><td>${money(b.total)}</td><td>${money(b.profit)}</td><td><span class="pill ${b.status.toLowerCase()}">${b.status}</span></td><td>${b.mode}</td><td><button style="background:#eef4fd;color:var(--navy);border:none;border-radius:7px;padding:5px 10px;cursor:pointer" onclick="viewBill('${b.no}')">View</button></td></tr>`).join('')||'<tr><td colspan="8" style="color:var(--muted)">No bills yet. Create one in “New Bill”.</td></tr>';
+  renderStats();
+}
+function viewBill(no){
+  const b=BILLS.find(x=>x.no===no);if(!b)return;
+  const rows=b.items.map((it,i)=>`<tr><td>${i+1}</td><td>${it.name}</td><td style="text-align:center">${it.qty}</td><td style="text-align:right">${money(it.price)}</td><td style="text-align:right">${money(it.price*it.qty)}</td></tr>`).join('');
+  const html=`<div class="bill"><div class="bill-head"><div class="bh-l"><img src="logo.png"><div><h3>Maa Digital Seva</h3><div style="font-size:.8rem;color:var(--muted)">Your Service • Our Priority</div></div></div>
+  <div class="meta"><b>INVOICE</b><br>Bill No: ${b.no}<br>Date: ${new Date(b.date).toLocaleDateString('en-IN')}<br>Status: ${b.status} • ${b.mode}</div></div>
+  <div style="margin-bottom:12px"><b>Customer:</b> ${b.name}${b.phone?' • '+b.phone:''}</div>
+  <table class="grid"><thead><tr><th>#</th><th>Service</th><th style="text-align:center">Qty</th><th style="text-align:right">Price</th><th style="text-align:right">Amount</th></tr></thead><tbody>${rows}</tbody></table>
+  <div class="bill-total"><table><tr class="grand"><td>Grand Total</td><td style="text-align:right">${money(b.total)}</td></tr></table></div>
+  <p style="text-align:center;margin-top:20px;color:var(--muted);font-size:.82rem">Thank you for choosing Maa Digital Seva.</p></div>`;
+  const area=document.getElementById('bill-print-area');area.innerHTML=html;area.style.display='block';window.print();setTimeout(()=>{area.style.display='none'},400);
+}
+function renderStats(){
+  const today=new Date().toISOString().slice(0,10);
+  const month=new Date().toISOString().slice(0,7);
+  const t=BILLS.filter(b=>b.date.slice(0,10)===today).reduce((s,b)=>s+b.total,0);
+  const m=BILLS.filter(b=>b.date.slice(0,7)===month).reduce((s,b)=>s+b.total,0);
+  const pr=BILLS.reduce((s,b)=>s+b.profit,0);
+  document.getElementById('st-today').textContent=money(t);
+  document.getElementById('st-month').textContent=money(m);
+  document.getElementById('st-bills').textContent=BILLS.length;
+  document.getElementById('st-profit').textContent=money(pr);
+}
+
+/* ---- Manage services ---- */
+function renderManage(){
+  const tb=document.querySelector('#ms-table tbody');
+  tb.innerHTML=SERVICES.map((s,i)=>`<tr><td>${s.name}</td><td>${s.unit||''}</td>
+    <td><input type="number" value="${typeof s.price==='number'?s.price:''}" style="width:80px" onchange="editSvc(${i},'price',this.value)"></td>
+    <td><input type="number" value="${s.cost||0}" style="width:80px" onchange="editSvc(${i},'cost',this.value)"></td>
+    <td>${money((typeof s.price==='number'?s.price:0)-(s.cost||0))}</td>
+    <td><button style="background:#fdecec;color:#c62828;border:none;border-radius:7px;padding:5px 10px;cursor:pointer" onclick="delSvc(${i})">✕</button></td></tr>`).join('');
+}
+function editSvc(i,f,v){SERVICES[i][f]=parseFloat(v)||0;save('mds_services',SERVICES);renderManage();toast('Updated')}
+function delSvc(i){SERVICES.splice(i,1);save('mds_services',SERVICES);renderManage();toast('Service removed')}
+function addService(){
+  const name=document.getElementById('ms-name').value.trim();
+  if(!name){toast('Enter a service name');return}
+  SERVICES.push({cat:'custom',catName:'Custom',color:'#0b2a5b',icon:'✳️',name,unit:document.getElementById('ms-unit').value.trim(),price:parseFloat(document.getElementById('ms-price').value)||0,cost:parseFloat(document.getElementById('ms-cost').value)||0});
+  save('mds_services',SERVICES);
+  ['ms-name','ms-unit','ms-price','ms-cost'].forEach(id=>document.getElementById(id).value='');
+  renderManage();toast('Service added');
+}
+
+/* ---- Reports ---- */
+function renderReports(){
+  const d=document.getElementById('rp-date').value||new Date().toISOString().slice(0,10);
+  const list=BILLS.filter(b=>b.date.slice(0,10)===d);
+  const sales=list.reduce((s,b)=>s+b.total,0);
+  const profit=list.reduce((s,b)=>s+b.profit,0);
+  document.getElementById('rp-sales').textContent=money(sales);
+  document.getElementById('rp-count').textContent=list.length;
+  document.getElementById('rp-profit').textContent=money(profit);
+  document.getElementById('rp-avg').textContent=money(list.length?sales/list.length:0);
+  const agg={};
+  list.forEach(b=>b.items.forEach(it=>{const k=it.name;agg[k]=agg[k]||{qty:0,sales:0,profit:0};agg[k].qty+=it.qty;agg[k].sales+=it.price*it.qty;agg[k].profit+=(it.price-it.cost)*it.qty}));
+  const tb=document.querySelector('#rp-table tbody');
+  tb.innerHTML=Object.entries(agg).map(([k,v])=>`<tr><td>${k}</td><td>${v.qty}</td><td>${money(v.sales)}</td><td>${money(v.profit)}</td></tr>`).join('')||'<tr><td colspan="4" style="color:var(--muted)">No sales on this date.</td></tr>';
+}
+
+/* ============================ INIT ============================ */
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  document.getElementById('top-phone').textContent=PHONE_DISPLAY;
+  const tel=document.getElementById('foot-phone');tel.textContent='📞 '+PHONE_DISPLAY;tel.href='tel:'+PHONE_DISPLAY.replace(/\s/g,'');
+  const wa="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hello Maa Digital Seva, I need a service.");
+  document.getElementById('float-wa').href=wa;
+  document.getElementById('pay-wa').href=wa;
+  document.getElementById('foot-wa2').href=wa;
+  renderTiles();
+  fillOrderSelect();
+  renderPicked();
+  const h=(location.hash||'').replace('#','');
+  if(h && document.getElementById('view-'+h)) show(h);
+  if(sessionStorage.getItem('mds_auth')==='1'){document.getElementById('admin-login').style.display='none';document.getElementById('admin-dash').style.display='block';initAdmin();}
+})();
+</script>
+</body>
+</html>
